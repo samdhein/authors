@@ -17,6 +17,7 @@ const Main = ( ) => {
     }
     
 
+//index route
 useEffect(()=>{
     axios.get('http://localhost:8000/api')
         .then(res=>setMessage(res.data.message))
@@ -27,7 +28,7 @@ useEffect(()=>{
         <div>
             <div>
                 <h2>Favorite Authors</h2>
-                {/* <h2>Message from backend: {message} </h2> */}
+                <h2>Message from backend: {message} </h2>
             {/* <CreateForm reloadList={reloadList} /> */}
             <DisplayTable refresh={refresh} reloadList={reloadList}/>
             </div>
